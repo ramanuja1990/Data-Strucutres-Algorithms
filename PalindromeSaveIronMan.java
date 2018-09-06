@@ -36,9 +36,14 @@ import java.util.Scanner;
 public class PalindromeSaveIronMan {
 	private static String[] testCaseArray;
 
+	/**
+	 * Each Alphanumeric characters are considered and compared with the respective characters from the end of the string.
+	 * If they are found same, it is a Palindrome
+	 * 
+	 * @param testCaseString - Input String
+	 * @return YES or NO
+	 */
 	public static String isPalindrome(String testCaseString) {
-		
-		String result = "YES";
 		int start = 0;
 		int end = testCaseString.length()-1;
 		testCaseString = testCaseString.toUpperCase();
@@ -46,8 +51,8 @@ public class PalindromeSaveIronMan {
 			if(Character.isAlphabetic(testCaseString.charAt(start)) || Character.isDigit(testCaseString.charAt(start))) {
 				if(Character.isAlphabetic(testCaseString.charAt(end)) || Character.isDigit(testCaseString.charAt(end))) {
 					if(testCaseString.charAt(start) != testCaseString.charAt(end)) {
-						result = "NO";
-						return result;
+						return "NO";
+						
 					}else {
 						start++;
 						end--;
@@ -60,7 +65,7 @@ public class PalindromeSaveIronMan {
 			}
 			
 		}
-		return result;
+		return "YES";
 	}
 
 
