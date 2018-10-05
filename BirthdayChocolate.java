@@ -43,6 +43,12 @@ import java.util.Scanner;
 
 public class BirthdayChocolate {
 		private static List<Integer> inputArray = new ArrayList<Integer>();
+		
+	/**
+	 * 	if length of array is equal to number of bars, then add all the elements and check if sum is equal to d.
+	 * Else for each element, add m consecutive elements' value, and check if sum is equal to d. If yes, increment output d by 1.
+	 * @return output - It is the number of times the conditions are met.
+	 */
 	 static int birthday(List<Integer> s, int d, int m) {
 	        int output = 0;
 	        if(s.size() == m){
@@ -54,7 +60,7 @@ public class BirthdayChocolate {
 	                output++;
 	            }
 	        }else{
-	             for(int square = 0; square < s.size()- m; square++){
+	             for(int square = 0; square < s.size()- m + 1; square++){
 	                int barSum = s.get(square);
 	                for(int nextSquare = square+1; nextSquare < square + m; nextSquare++){
 	                    barSum += s.get(nextSquare);
