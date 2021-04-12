@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 /**
  * Generate all the strings of n bits. Assume A[0..n – 1] is an array of size n.
+ * T(n) = O(2 pow n)
  */
 public class BinaryString {
     private static int[] BinaryString;
