@@ -32,6 +32,7 @@ public class BinarySearch {
         System.out.println("\n Enter number to find");
         int findNum = input.nextInt();
         int numPosition = binarySearch(inputArray, findNum, 0, arrayLength - 1);
+        input.close();
         System.out.println(Arrays.toString(inputArray));
         if(numPosition != -1) {
             System.out.println("Number " + findNum + " found at Postion " + numPosition);
