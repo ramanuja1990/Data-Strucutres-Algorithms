@@ -15,11 +15,12 @@ public class UniqueChars {
         }
         return response;
     }
-
+     
     public static String isUniqueSolutionTwo(String inputString) {
         String response = "unique";
         int checker = 0;
         for(int index = 0; index < inputString.length(); index++) {
+            //0000 0000 0000 0001 
             int val = inputString.charAt(index) - 'a';
             if((checker & (1 << val)) > 0) {
                 response = "not unique";
