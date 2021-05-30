@@ -1,5 +1,5 @@
-import java.util.Scanner;
-
+import java.util.*;
+import java.lang.String;
 public class UniqueChars {
     static boolean charSet[] = new boolean[128];
     public static String isUniqueSolutionOne(String inputString) {
@@ -22,10 +22,12 @@ public class UniqueChars {
         for(int index = 0; index < inputString.length(); index++) {
             //0000 0000 0000 0001 
             int val = inputString.charAt(index) - 'a';
+            //check if checker bit is already set
             if((checker & (1 << val)) > 0) {
                 response = "not unique";
                 break;
             }
+            //Left shift one by char times. Then set that checker bit
             checker |= 1 << val;
         }
         return response;
